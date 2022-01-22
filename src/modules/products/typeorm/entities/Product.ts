@@ -15,7 +15,7 @@ class Product {
   name: string;
 
   @Column('decimal')
-  prince: number;
+  price: number;
 
   @Column('decimal')
   quantity: number;
