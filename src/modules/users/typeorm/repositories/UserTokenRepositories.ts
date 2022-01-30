@@ -4,8 +4,7 @@ import { UserToken } from '../entities/UserToken';
 @EntityRepository(UserToken)
 class UserTokenRepositories extends Repository<UserToken> {
   public async findByToken(token: string): Promise<UserToken | undefined> {
-    const userToken = await this.findOne({ where: token });
-
+    const userToken = await this.findOne({ where: { token} });
     return userToken;
   }
 
